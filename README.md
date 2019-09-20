@@ -10,3 +10,4 @@ Project not currently functional
       example.
   1. Add references to Jamilih.
 1. See also <https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/>.
+1. Also develop as [Tagged template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates) parser.
