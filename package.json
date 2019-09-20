@@ -1,0 +1,34 @@
+{
+  "name": "tree-sitter-jamilih",
+  "version": "0.1.0",
+  "description": "Parser for Jamilih",
+  "main": "index.js",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "parse": "tree-sitter parse",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettz9/tree-sitter-jamilih.git"
+  },
+  "keywords": [
+    "tree-sitter"
+  ],
+  "author": "Brett Zamir",
+  "contributors": [],
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brettz9/tree-sitter-jamilih/issues"
+  },
+  "homepage": "https://github.com/brettz9/tree-sitter-jamilih#readme",
+  "dependencies": {
+    "nan": "^2.14.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.15.8"
+  }
+}
