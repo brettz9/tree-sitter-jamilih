@@ -2,6 +2,10 @@
 
 Project not currently functional
 
+## Developing notes
+
+- For editing in Atom, there is a package, [language-tree-test](https://atom.io/packages/language-tree-test), which adds syntax highlighting to tree-sitter test files.
+
 ## To-dos
 
 1. Complete parser per <http://tree-sitter.github.io/tree-sitter/creating-parsers>.

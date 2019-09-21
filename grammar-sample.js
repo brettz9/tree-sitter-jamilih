@@ -1,9 +1,11 @@
+/* eslint-disable indent */
+/* globals grammar, repeat, choice, seq */
 module.exports = grammar({
-  // Required fields: name?, rules
-  // Optional fields: extras, inline, conflicts, externals, word
+  // Required fields: name? (string), rules (object)
+  // Optional fields: extras, inline, conflicts, externals, word (all functions?)
   // Builtins:
   //   $.XYZ, <string>, <regex literal>
-  // Functions:
+  // Grammar functions:
   //   seq(rule1, rule2, ...), choice(rule1, rule2, ...)
   //   repeat(rule), repeat1(rule), optional(rule)
   //   prec(number, rule)
@@ -26,13 +28,13 @@ module.exports = grammar({
       $.block
     ),
 
-    parameter_list: $ => seq(
+    parameter_list: () => seq(
       '(',
        // TODO: parameters
       ')'
     ),
 
-    _type: $ => choice(
+    _type: () => choice(
       'bool'
       // TODO: other kinds of types
     ),
@@ -60,8 +62,8 @@ module.exports = grammar({
       // TODO: other kinds of expressions
     ),
 
-    identifier: $ => /[a-z]+/,
+    identifier: () => /[a-z]+/,
 
-    number: $ => /\d+/
+    number: () => /\d+/
   }
 });

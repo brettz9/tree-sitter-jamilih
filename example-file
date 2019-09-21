@@ -1,1 +1,7 @@
-hello
+<ul id: myList class: aList [
+  Some
+  <li [
+    text
+  ]>
+  <li []>
+]>

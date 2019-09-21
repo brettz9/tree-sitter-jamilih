@@ -4,9 +4,10 @@
   "description": "Parser for Jamilih",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --report-unused-disable-directives .",
     "generate": "tree-sitter generate",
     "parse-silent": "npm run parse -- --quiet",
-    "parse-example": "npm run parse -- 'file/path1' 'file/path2'",
+    "parse-example": "npm run parse -- 'example-file'",
     "parse": "tree-sitter parse",
     "test-only": "tree-sitter test",
     "test-single": "tree-sitter test -f",
@@ -34,6 +35,7 @@
     "nan": "^2.14.0"
   },
   "devDependencies": {
+    "eslint": "^6.4.0",
     "tree-sitter-cli": "^0.15.8"
   }
 }
