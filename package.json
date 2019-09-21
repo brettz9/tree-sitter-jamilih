@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "generate": "tree-sitter generate",
+    "parse-silent": "npm run parse -- --quiet",
+    "parse-example": "npm run parse -- 'file/path1' 'file/path2'",
     "parse": "tree-sitter parse",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-only": "tree-sitter test",
+    "test-single": "tree-sitter test -f",
+    "test-single-example": "npm run test-single -- 'Bare element'",
+    "test": "npm run generate && npm run test-only"
   },
   "repository": {
     "type": "git",
