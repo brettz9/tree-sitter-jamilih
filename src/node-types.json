@@ -187,6 +187,14 @@
           "named": true
         },
         {
+          "type": "html_fragment",
+          "named": true
+        },
+        {
+          "type": "start_children",
+          "named": true
+        },
+        {
           "type": "start_element",
           "named": true
         }

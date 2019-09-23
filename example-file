@@ -1,7 +1,8 @@
-<ul id: myList class: aList [
+<ul id: myList a:"b"class: aList [
   Some
-  <li [
+  <li[
     text
-  ]>
+  ]
+  <li [>
   <li []>
 ]>

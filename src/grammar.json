@@ -77,45 +77,80 @@
       "value": "->"
     },
     "element": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "start_element"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "element_name"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "attributes"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "children"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "end_element"
-        }
-      ]
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "start_element"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "element_name"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "attributes"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "children"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "end_element"
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "children"
+              },
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "start_children"
+                  },
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "html_fragment"
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "end_element"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     "start_element": {
       "type": "STRING",
@@ -348,7 +383,7 @@
     },
     "text": {
       "type": "PATTERN",
-      "value": "[^<\\]]+"
+      "value": "[^<>\\]]+"
     }
   },
   "extras": [

@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-/* globals grammar, repeat1, choice, seq, optional */
+/* globals grammar, repeat1, choice, seq, prec, optional */
 module.exports = grammar({
   name: 'jamilih',
 
@@ -41,13 +41,21 @@ module.exports = grammar({
 
       end_comment: (/* $ */) => '->',
 
-    element: $ => seq(
+    element: $ => prec.right(seq(
       $.start_element,
       $.element_name,
       optional($.attributes),
-      optional($.children),
-      $.end_element
-    ),
+      choice(
+        seq($.children, $.end_element),
+        // These other options are ugly, but allowable for terseness
+        $.children,
+        seq(
+          $.start_children,
+          optional($.html_fragment),
+          $.end_element
+        )
+      )
+    )),
 
       start_element: (/* $ */) => '<',
 
@@ -122,6 +130,6 @@ module.exports = grammar({
       end_element: (/* $ */) => '>',
 
     // Todo: tilde-escaped, etc.?
-    text: ( /* $ */ ) => /[^<\]]+/,
+    text: ( /* $ */ ) => /[^<>\]]+/,
   }
 });
