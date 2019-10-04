@@ -13,5 +13,8 @@ Project not currently functional
   1. See <https://github.com/tree-sitter/tree-sitter-css/blob/master/grammar.js> for
       example.
   1. Add references to Jamilih.
-1. See also <https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/>.
+1. Also follow <https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/>
+    so can get syntax highlighting in Atom. Apply with package [language-babel](https://github.com/gandm/language-babel) (or fork [language-javascript-plus](https://github.com/vokeio/language-javascript-plus) if necessary?) to get highlighting within
+    template literals as well.
 1. Also develop as [Tagged template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates) parser.
+1. Rollup plugin to do inline conversion (for server-side or static client-side)

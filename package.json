@@ -36,6 +36,6 @@
   },
   "devDependencies": {
     "eslint": "^6.4.0",
-    "tree-sitter-cli": "^0.15.8"
+    "tree-sitter-cli": "^0.15.9"
   }
 }
